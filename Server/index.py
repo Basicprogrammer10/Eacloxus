@@ -1,7 +1,9 @@
 import base64
+from http.server import BaseHTTPRequestHandler, HTTPServer
 ############ VARS ############
 hostName = "localhost"
 serverPort = 1234
+serverVersion = "0.1"
 
 database = "data/data.json"
 authFile = "data/auth.json"
@@ -36,6 +38,21 @@ class MyServer(BaseHTTPRequestHandler):
                         self.send_response(200)
                         self.send_header("Content-type", "text/html")
                         self.end_headers()
+                        self.wfile.write(bytes(createJsonResponce(
+                            serverVersion, "success"), "utf-8"))
+                    else:
+                        self.send_response(401)
+                        self.send_header("Content-type", "text/html")
+                        self.end_headers()
+                        self.wfile.write(bytes(createJsonResponce(
+                            serverVersion, "denied"), "utf-8"))
+
+
+def createJsonResponce(server, auth):
+    data = {}
+    data['serverVersion'] = server
+    data['auth'] = auth
+    return json.dumps(data)
 
 
 def getVersionIp(version, auth):
