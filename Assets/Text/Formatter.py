@@ -1,0 +1,6 @@
+file = open('MOTD.txt', 'r')
+noun = file.readlines()
+file.close()
+file = open('MOTDFormat.txt', 'w')
+file.write(str(noun))
+file.close()

@@ -1,0 +1,213 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 98,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": false,
+    "folderProject": true,
+    "linuxExecutableFilename": "",
+    "macExecutableFilename": "",
+    "orientation": "landscape",
+    "packageName": "com.connorcode.game",
+    "projectFile": "V:\\Documents\\School\\8th\\GameDesign\\Game\\game.json",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "adaptWidth",
+    "useExternalSourceFiles": false,
+    "version": "0.0.4",
+    "winExecutableFilename": "",
+    "winExecutableIconFile": "",
+    "name": "Project",
+    "author": "Connor Slade",
+    "windowWidth": 1920,
+    "windowHeight": 1080,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "showGDevelopSplash": false
+    },
+    "extensionProperties": [],
+    "extensions": [
+      {
+        "name": "BuiltinObject"
+      },
+      {
+        "name": "BuiltinAudio"
+      },
+      {
+        "name": "BuiltinVariables"
+      },
+      {
+        "name": "BuiltinTime"
+      },
+      {
+        "name": "BuiltinMouse"
+      },
+      {
+        "name": "BuiltinKeyboard"
+      },
+      {
+        "name": "BuiltinJoystick"
+      },
+      {
+        "name": "BuiltinCamera"
+      },
+      {
+        "name": "BuiltinWindow"
+      },
+      {
+        "name": "BuiltinFile"
+      },
+      {
+        "name": "BuiltinNetwork"
+      },
+      {
+        "name": "BuiltinScene"
+      },
+      {
+        "name": "BuiltinAdvanced"
+      },
+      {
+        "name": "Sprite"
+      },
+      {
+        "name": "BuiltinCommonInstructions"
+      },
+      {
+        "name": "BuiltinCommonConversions"
+      },
+      {
+        "name": "BuiltinStringInstructions"
+      },
+      {
+        "name": "BuiltinMathematicalTools"
+      },
+      {
+        "name": "BuiltinExternalLayouts"
+      }
+    ],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "file": "Assets/Music/GuiltyPlead_Background.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\GuiltyPlead_Background.wav",
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Music/TitleMusic.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\TitleMusic.wav",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/tiled_Forest Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\tiled_Forest Background.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/TitlePage.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\TitlePage.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/ButtonHitBox.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\ButtonHitBox.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/HandCursor2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\HandCursor2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/Hand.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\Hand.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/BTNInfo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\BTNInfo.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Music/Background.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\Background.mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Music/Background1.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\Background1.wav",
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Music/Background2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\Background2.wav",
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/homepage"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/options"
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
