@@ -1,7 +1,10 @@
+import base64
 ############ VARS ############
-hostName = "0.0.0.0"
-serverPort = 8080
-database = "data.json"
+hostName = "localhost"
+serverPort = 1234
+
+database = "data/data.json"
+authFile = "data/auth.json"
 
 toImport = {"base64": "", "json": "", "urllib.parse": "urlparse",
             "time": "", "http.server": "BaseHTTPRequestHandler, HTTPServer"}
@@ -20,80 +23,24 @@ def colored(text, color):
 
 
 class MyServer(BaseHTTPRequestHandler):
+    def log_message(self, format, *args):
+        return
+
     def do_GET(self):
         urlp = urlparse(self.path)
         urlps = urlp.path.split("/")
-        if urlps[1] == "r" and len(urlps) > 2 and urlps[2] != "":
-            self.send_response(200)
-            self.send_header("Content-type", "text/html")
-            self.end_headers()
-            self.wfile.write(
-                bytes(
-                    formatReadResponce(
-                        responceFile,
-                        databaseRead(database)[urlps[2]]["url"]),
-                    "utf-8",
-                ))
-        elif urlps[1] == "":
-            self.send_response(200)
-            self.send_header("Content-type", "text/html")
-            self.end_headers()
-            self.wfile.write(bytes(formatReadResponce(
-                responceFile, "/create/"), "utf-8"))
-        elif urlps[1] == "create":
-            try:
-                if urlps[2] == "api":
-                    pram = urlparse(self.path).query.split("?")
-                    working = []
-                    for i in pram:
-                        working.append(i.split("=", 1))
-                    if inDatabase(str(
-                            base64.b64decode(working[1][1]).decode())):
-                        self.send_response(409)
+        if urlps[1] == "login":
+            for i in self.path.split("?")[1].split("&"):
+                if i.split("=")[0].lower() == "version":
+                    if self.client_address[0] in getVersionIp(i.split("=")[1], authFile):
+                        self.send_response(200)
+                        self.send_header("Content-type", "text/html")
                         self.end_headers()
-                    else:
-                        self.send_response(201)
-                        self.end_headers()
-                        databaseWrite(database, '"' + str(base64.b64decode(working[1][1]).decode(
-                        )) + '":{"url":"' + str(base64.b64decode(working[0][1]).decode()) + '"}}',)
-                else:
-                    self.send_response(200)
-                    self.send_header("Content-type", "text/html")
-                    self.end_headers()
-                    self.wfile.write(
-                        bytes(fileRead("assets/create.html"), "utf-8"))
-            except ImportError:
-                pass
-        else:
-            if urlps[1].lower() in files:
-                self.send_response(200)
-                self.wfile.write(fileReadB("assets/" + urlps[1]))
-            else:
-                self.send_response(404)
-                self.send_header("Content-type", "text/html")
-                self.end_headers()
-                self.wfile.write(bytes(fileRead("assets/404.html"), "utf-8"))
 
 
-def inDatabase(data):
-    if data in databaseRead(database):
-        return True
-    else:
-        return False
-
-
-def fileRead(file):
-    return open(file, "r").read()
-
-
-def fileReadB(file):
-    return open(file, "br").read()
-
-
-def formatReadResponce(file, url):
-    file = open(file, "r", encoding="utf-8")
-    data = file.read().format(url=url)
-    return data
+def getVersionIp(version, auth):
+    auth = json.loads(open(auth, 'r').read())
+    return auth['version'][version]
 
 
 def databaseRead(file):
@@ -120,9 +67,8 @@ def startupChecks():
 
 def startServer(hostName, serverPort):
     webServer = HTTPServer((hostName, serverPort), MyServer)
-    print(
-        colored("Server started http://%s:%s" % (hostName, serverPort),
-                "green"))
+    print(colored("Server started http://%s:%s" %
+                  (hostName, serverPort), "green"))
     try:
         webServer.serve_forever()
     except:
