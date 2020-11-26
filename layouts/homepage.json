@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.466
+    "zoomFactor": 0.514
   },
   "objectsGroups": [],
   "variables": [
@@ -78,32 +78,16 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 20,
       "layer": "",
       "locked": false,
       "name": "Cursor",
       "persistentUuid": "8d728d3b-b285-412e-8ed7-b61d6fc718a7",
-      "width": 0,
+      "width": 20,
       "x": 1920,
       "y": 0,
       "zOrder": 9,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 25,
-      "layer": "",
-      "locked": false,
-      "name": "Hand",
-      "persistentUuid": "ad28ee81-defa-4b8e-94c5-8fb942cc2988",
-      "width": 25,
-      "x": 1920,
-      "y": 0,
-      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -450,45 +434,6 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "Assets\\Textures\\HandCursor2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Hand",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\Hand.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
