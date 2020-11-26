@@ -18,6 +18,6 @@
 
 ## Commands
 
-- Add needed files`yarn add electron-builder --dev`
+- Add needed files `yarn add electron-builder --dev`
 
 - Compile Electron App `yarn electron-builder build`
