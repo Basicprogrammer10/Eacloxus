@@ -1,5 +1,3 @@
-import base64
-from http.server import BaseHTTPRequestHandler, HTTPServer
 ############ VARS ############
 hostName = "localhost"
 serverPort = 1234
@@ -9,7 +7,7 @@ database = "data/data.json"
 authFile = "data/auth.json"
 
 toImport = {"base64": "", "json": "", "urllib.parse": "urlparse",
-            "time": "", "http.server": "BaseHTTPRequestHandler, HTTPServer"}
+            "time": "", "http.server": "BaseHTTPRequestHandler, HTTPServer", "datetime": "datetime"}
 ########### SETUP ###########
 for i in toImport:
     defult = False if toImport[i] != "" else True
@@ -39,25 +37,32 @@ class MyServer(BaseHTTPRequestHandler):
                         self.send_header("Content-type", "text/html")
                         self.end_headers()
                         self.wfile.write(bytes(createJsonResponce(
-                            serverVersion, "success"), "utf-8"))
+                            [['serverVersion', serverVersion], ['auth', 'success']]), "utf-8"))
+                        databaseWrite(database, createJsonResponce(
+                            [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'success']]))
                     else:
                         self.send_response(401)
                         self.send_header("Content-type", "text/html")
                         self.end_headers()
                         self.wfile.write(bytes(createJsonResponce(
-                            serverVersion, "denied"), "utf-8"))
+                            [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"))
+                        databaseWrite(database, createJsonResponce(
+                            [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'denied']]))
 
 
-def createJsonResponce(server, auth):
+def createJsonResponce(jsonData):
     data = {}
-    data['serverVersion'] = server
-    data['auth'] = auth
+    for i in jsonData:
+        data[i[0]] = i[1]
     return json.dumps(data)
 
 
 def getVersionIp(version, auth):
-    auth = json.loads(open(auth, 'r').read())
-    return auth['version'][version]
+    try:
+        auth = json.loads(open(auth, 'r').read())
+        return auth['version'][version]
+    except KeyError:
+        return []
 
 
 def databaseRead(file):
@@ -68,15 +73,16 @@ def databaseRead(file):
 
 def databaseWrite(file, data):
     working = open(file, "r+", encoding="utf-8").read()
-    comma = "," if working != "{}" else ""
-    open(file, "w", encoding="utf-8").write(working[:-1] + comma + "\n" + data)
+    comma = "," if working != "[]" else ""
+    open(
+        file, "w", encoding="utf-8").write(working[:-1] + comma + "\n" + data + "]")
 
 
 def startupChecks():
     try:
         working = open(database, "r").read()
         if working == "":
-            open(database, "w").write("{}")
+            open(database, "w").write("[]")
     except:
         open(database, "x")
         startupChecks()
