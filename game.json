@@ -154,15 +154,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Assets/Textures/Hand.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Assets\\Textures\\Hand.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Assets/Textures/BTNInfo.png",
         "kind": "image",
         "metadata": "",
@@ -229,15 +220,6 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Textures\\On.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Assets/Textures/Background.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Assets\\Textures\\Background.png",
         "smoothed": false,
         "userAdded": true
       }
