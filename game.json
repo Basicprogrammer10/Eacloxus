@@ -12,15 +12,15 @@
     "linuxExecutableFilename": "",
     "macExecutableFilename": "",
     "orientation": "landscape",
-    "packageName": "com.connorcode.game",
-    "projectFile": "V:\\Documents\\School\\8th\\GameDesign\\Game\\game.json",
+    "packageName": "com.connorcode.eacloxus",
+    "projectFile": "V:\\Documents\\School\\8th\\GameDesign\\Eacloxus\\game.json",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
-    "version": "0.0.6",
+    "version": "0.0.7",
     "winExecutableFilename": "",
     "winExecutableIconFile": "",
-    "name": "Project",
+    "name": "Eacloxus",
     "author": "Connor Slade",
     "windowWidth": 1920,
     "windowHeight": 1080,
@@ -265,7 +265,7 @@
     },
     {
       "name": "Version",
-      "value": "0.0.6"
+      "value": "0.0.7"
     },
     {
       "name": "showParticles",
