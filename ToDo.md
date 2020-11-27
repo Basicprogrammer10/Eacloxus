@@ -10,6 +10,10 @@
 
 - More EasterEggs
 
+- Setup Auth server on Server
+
+:heavy_check_mark: Auth Server
+
 :heavy_check_mark: EasterEggs!
 
 :heavy_check_mark: Github?
