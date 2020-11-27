@@ -30,24 +30,33 @@ class MyServer(BaseHTTPRequestHandler):
         urlp = urlparse(self.path)
         urlps = urlp.path.split("/")
         if urlps[1] == "login":
-            for i in self.path.split("?")[1].split("&"):
-                if i.split("=")[0].lower() == "version":
-                    if self.client_address[0] in getVersionIp(i.split("=")[1], authFile):
-                        self.send_response(200)
-                        self.send_header("Content-type", "text/html")
-                        self.end_headers()
-                        self.wfile.write(bytes(createJsonResponce(
-                            [['serverVersion', serverVersion], ['auth', 'success']]), "utf-8"))
-                        databaseWrite(database, createJsonResponce(
-                            [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'success']]))
-                    else:
-                        self.send_response(401)
-                        self.send_header("Content-type", "text/html")
-                        self.end_headers()
-                        self.wfile.write(bytes(createJsonResponce(
-                            [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"))
-                        databaseWrite(database, createJsonResponce(
-                            [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'denied']]))
+            try:
+                for i in self.path.split("?")[1].split("&"):
+                    if i.split("=")[0].lower() == "version":
+                        if self.client_address[0] in getVersionIp(i.split("=")[1], authFile):
+                            self.send_response(200)
+                            self.send_header("Content-type", "text/html")
+                            self.end_headers()
+                            self.wfile.write(bytes(createJsonResponce(
+                                [['serverVersion', serverVersion], ['auth', 'success']]), "utf-8"))
+                            databaseWrite(database, createJsonResponce(
+                                [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'success']]))
+                        else:
+                            self.send_response(401)
+                            self.send_header("Content-type", "text/html")
+                            self.end_headers()
+                            self.wfile.write(bytes(createJsonResponce(
+                                [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"))
+                            databaseWrite(database, createJsonResponce(
+                                [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'denied']]))
+            except:
+                self.send_response(400)
+                self.send_header("Content-type", "text/html")
+                self.end_headers()
+                self.wfile.write(bytes(createJsonResponce(
+                    [['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"))
+                databaseWrite(database, createJsonResponce(
+                    [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'invalid Request']]))
 
 
 def createJsonResponce(jsonData):
