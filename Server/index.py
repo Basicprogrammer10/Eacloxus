@@ -1,7 +1,7 @@
 ############ VARS ############
 hostName = "localhost"
 serverPort = 8888
-serverVersion = "0.2"
+serverVersion = "0.3"
 
 database = "data/data.json"
 authFile = "data/auth.json"
