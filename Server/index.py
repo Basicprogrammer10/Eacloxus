@@ -1,6 +1,6 @@
 ############ VARS ############
 hostName = "localhost"
-serverPort = 1234
+serverPort = 8888
 serverVersion = "0.2"
 
 database = "data/data.json"
