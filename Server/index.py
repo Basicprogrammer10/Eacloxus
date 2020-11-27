@@ -40,14 +40,20 @@ class MyServer(BaseHTTPRequestHandler):
                 for i in self.path.split("?")[1].split("&"):
                     if i.split("=")[0].lower() == "version":
                         if self.client_address[0] in getVersionIp(i.split("=")[1], authFile):
-                            self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'success'], ['ip', self.client_address[0]]]), "utf-8"), 200)
-                            databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'success']]))
+                            self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], [
+                                          'auth', 'success'], ['ip', self.client_address[0]]]), "utf-8"), 200)
+                            databaseWrite(database, createJsonResponce(
+                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'success']]))
                         else:
-                            self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"), 200)
-                            databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'denied']]))
+                            self.responce(bytes(createJsonResponce(
+                                [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"), 200)
+                            databaseWrite(database, createJsonResponce(
+                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'denied']]))
             except:
-                self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"),400)
-                databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'invalid Request']]))
+                self.responce(bytes(createJsonResponce(
+                    [['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"), 400)
+                databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], [
+                              'date', dateTimeNow], ['auth', 'invalid Request']]))
 
 
 def createJsonResponce(jsonData):
@@ -84,7 +90,8 @@ def startupChecks():
 
 def startServer(hostName, serverPort):
     webServer = HTTPServer((hostName, serverPort), MyServer)
-    print(colored("Server started http://%s:%s" % (hostName, serverPort), "green"))
+    print(colored("Server started http://%s:%s" %
+                  (hostName, serverPort), "green"))
     try:
         webServer.serve_forever()
     except:
