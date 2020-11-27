@@ -12,7 +12,7 @@
 
 - Add more Info to the Data.json
 
-- Setup Auth server on Server
+:heavy_check_mark: Setup Auth server on Server
 
 :heavy_check_mark: Auth Server
 
