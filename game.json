@@ -17,7 +17,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
-    "version": "0.0.8",
+    "version": "0.0.9",
     "winExecutableFilename": "",
     "winExecutableIconFile": "",
     "name": "Eacloxus",
@@ -247,7 +247,7 @@
     },
     {
       "name": "Version",
-      "value": "0.0.8"
+      "value": "0.0.9"
     },
     {
       "name": "showParticles",
