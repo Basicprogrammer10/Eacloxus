@@ -1,7 +1,7 @@
 ############ VARS ############
 hostName = "localhost"
 serverPort = 1234
-serverVersion = "0.1"
+serverVersion = "0.2"
 
 database = "data/data.json"
 authFile = "data/auth.json"
@@ -26,37 +26,28 @@ class MyServer(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         return
 
+    def responce(self, data, code):
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(data)
+
     def do_GET(self):
-        urlp = urlparse(self.path)
-        urlps = urlp.path.split("/")
+        urlps = urlparse(self.path).path.split("/")
+        dateTimeNow = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         if urlps[1] == "login":
             try:
                 for i in self.path.split("?")[1].split("&"):
                     if i.split("=")[0].lower() == "version":
                         if self.client_address[0] in getVersionIp(i.split("=")[1], authFile):
-                            self.send_response(200)
-                            self.send_header("Content-type", "text/html")
-                            self.end_headers()
-                            self.wfile.write(bytes(createJsonResponce(
-                                [['serverVersion', serverVersion], ['auth', 'success']]), "utf-8"))
-                            databaseWrite(database, createJsonResponce(
-                                [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'success']]))
+                            self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'success'], ['ip', self.client_address[0]]]), "utf-8"), 200)
+                            databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'success']]))
                         else:
-                            self.send_response(200)
-                            self.send_header("Content-type", "text/html")
-                            self.end_headers()
-                            self.wfile.write(bytes(createJsonResponce(
-                                [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"))
-                            databaseWrite(database, createJsonResponce(
-                                [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'denied']]))
+                            self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"), 200)
+                            databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'denied']]))
             except:
-                self.send_response(400)
-                self.send_header("Content-type", "text/html")
-                self.end_headers()
-                self.wfile.write(bytes(createJsonResponce(
-                    [['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"))
-                databaseWrite(database, createJsonResponce(
-                    [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'invalid Request']]))
+                self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"),400)
+                databaseWrite(database, createJsonResponce([['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'invalid Request']]))
 
 
 def createJsonResponce(jsonData):
@@ -72,12 +63,6 @@ def getVersionIp(version, auth):
         return auth['version'][version]
     except KeyError:
         return []
-
-
-def databaseRead(file):
-    file = open(file, "r", encoding="utf-8")
-    data = json.loads(file.read())
-    return data
 
 
 def databaseWrite(file, data):
@@ -99,8 +84,7 @@ def startupChecks():
 
 def startServer(hostName, serverPort):
     webServer = HTTPServer((hostName, serverPort), MyServer)
-    print(colored("Server started http://%s:%s" %
-                  (hostName, serverPort), "green"))
+    print(colored("Server started http://%s:%s" % (hostName, serverPort), "green"))
     try:
         webServer.serve_forever()
     except:
