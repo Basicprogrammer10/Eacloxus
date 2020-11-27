@@ -1,8 +1,8 @@
-const validationServer =
-  "https://connorcode.com/Downloads/EacloxusStatus.json/";
-const ipServer = "https://ipinfo.io/ip";
-
+const validationServer = "http://localhost:1234/login/";
+const version =
+  runtimeScene._runtimeGame._variables._variables.items.Version._str;
 const remote = require("electron").remote;
+
 function httpGetAsync(theUrl, callback) {
   try {
     var xmlHttp = new XMLHttpRequest();
@@ -18,38 +18,24 @@ function httpGetAsync(theUrl, callback) {
     remote.getCurrentWindow().close();
   }
 }
-async function message(text) {
-  confirm(text);
-}
+
 function receiveValidation(data) {
-  window.validationIp = JSON.parse(data);
-  httpGetAsync(ipServer, receiveLocalIp);
-}
-function receiveLocalIp(data) {
-  try {
-    window.LocalIp = data.split("\n")[0];
-    var gameVersion =
-      runtimeScene._runtimeGame._variables._variables.items.Version._str;
-    if (window.validationIp.version[gameVersion].includes(window.LocalIp)) {
-      console.log("Success! Logged in with Ip: " + window.LocalIp);
-    } else {
-      message("You are not allowed to run this Internal Release...");
-      remote.getCurrentWindow().close();
-    }
-  } catch {
-    message("Error connecting to Authentication Servers");
+  var validation = JSON.parse(data);
+  console.log(validation);
+  if (validation["auth"] == "success") {
+    console.log("Sucess!");
+  } else if (validation["auth"] == "denied") {
+    confirm("You are not allowed to run this Internal Release...");
+    remote.getCurrentWindow().close();
+  } else {
+    confirm("Error connecting to Authentication Servers");
     remote.getCurrentWindow().close();
   }
 }
 
 try {
-  httpGetAsync(validationServer, receiveValidation);
+  httpGetAsync(validationServer + "?version=" + version, receiveValidation);
 } catch {
   message("Error connecting to Authentication Servers");
   remote.getCurrentWindow().close();
 }
-
-runtimeScene
-  .getVariables()
-  .get("random")
-  .setString(Math.floor(Math.random() * 100));
