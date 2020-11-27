@@ -1,4 +1,4 @@
-const validationServer = "http://localhost:1234/login/";
+const validationServer = "http://mc.connorcode.com:8888/login/";
 const version =
   runtimeScene._runtimeGame._variables._variables.items.Version._str;
 const remote = require("electron").remote;
