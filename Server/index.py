@@ -42,7 +42,7 @@ class MyServer(BaseHTTPRequestHandler):
                             databaseWrite(database, createJsonResponce(
                                 [['ip', self.client_address[0]], ['date', datetime.now().strftime("%d/%m/%Y %H:%M:%S")], ['auth', 'success']]))
                         else:
-                            self.send_response(401)
+                            self.send_response(200)
                             self.send_header("Content-type", "text/html")
                             self.end_headers()
                             self.wfile.write(bytes(createJsonResponce(
