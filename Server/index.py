@@ -43,12 +43,12 @@ class MyServer(BaseHTTPRequestHandler):
                             self.responce(bytes(createJsonResponce([['serverVersion', serverVersion], [
                                           'auth', 'success'], ['ip', self.client_address[0]]]), "utf-8"), 200)
                             databaseWrite(database, createJsonResponce(
-                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'success']]))
+                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['version', i.split("=")[1]], ['auth', 'success']]))
                         else:
                             self.responce(bytes(createJsonResponce(
                                 [['serverVersion', serverVersion], ['auth', 'denied']]), "utf-8"), 200)
                             databaseWrite(database, createJsonResponce(
-                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['auth', 'denied']]))
+                                [['ip', self.client_address[0]], ['date', dateTimeNow], ['version', i.split("=")[1]], ['auth', 'denied']]))
             except:
                 self.responce(bytes(createJsonResponce(
                     [['serverVersion', serverVersion], ['auth', 'invalidRequest']]), "utf-8"), 400)
