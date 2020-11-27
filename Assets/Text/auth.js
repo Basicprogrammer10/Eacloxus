@@ -21,7 +21,6 @@ function httpGetAsync(theUrl, callback) {
 
 function receiveValidation(data) {
   var validation = JSON.parse(data);
-  console.log(validation);
   if (validation["auth"] == "success") {
     console.log("Sucess!");
   } else if (validation["auth"] == "denied") {
