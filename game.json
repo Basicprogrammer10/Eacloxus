@@ -222,6 +222,13 @@
         "name": "Assets\\Textures\\On.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Music/ShutterSound.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Music\\ShutterSound.wav",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
