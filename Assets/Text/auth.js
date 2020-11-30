@@ -33,9 +33,5 @@ function receiveValidation(data) {
   }
 }
 
-try {
-  httpGetAsync(validationServer + "?version=" + version, receiveValidation);
-} catch {
-  message("Error connecting to Authentication Servers");
-  remote.getCurrentWindow().close();
-}
+
+httpGetAsync(validationServer + "?version=" + version, receiveValidation);
