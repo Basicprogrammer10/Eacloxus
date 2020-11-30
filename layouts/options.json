@@ -94,22 +94,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "height": 25,
-      "layer": "Overlay",
-      "locked": false,
-      "name": "Hand",
-      "persistentUuid": "ad28ee81-defa-4b8e-94c5-8fb942cc2988",
-      "width": 25,
-      "x": 1920,
-      "y": 0,
-      "zOrder": 10,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
@@ -991,45 +975,6 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "Assets\\Textures\\HandCursor2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Hand",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\Hand.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
