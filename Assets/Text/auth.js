@@ -23,6 +23,7 @@ function receiveValidation(data) {
   var validation = JSON.parse(data);
   if (validation["auth"] == "success") {
     console.log("Sucess! Logged in with ip of: " + validation["ip"]);
+    runtimeScene._runtimeGame.getVariables().get("isAuth").setNumber(1);
   } else if (validation["auth"] == "denied") {
     confirm("You are not allowed to run this Internal Release...");
     remote.getCurrentWindow().close();
