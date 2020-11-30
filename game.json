@@ -267,6 +267,10 @@
     {
       "name": "isIn",
       "value": "1"
+    },
+    {
+      "name": "isAuth",
+      "value": "0"
     }
   ],
   "layouts": [

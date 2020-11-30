@@ -2195,6 +2195,18 @@
             {
               "type": {
                 "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "isAuth",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": [],
@@ -2207,7 +2219,7 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": "const validationServer = \"http://mc.connorcode.com:8888/login/\";\nconst version =\n  runtimeScene._runtimeGame._variables._variables.items.Version._str;\nconst remote = require(\"electron\").remote;\n\nfunction httpGetAsync(theUrl, callback) {\n  try {\n    var xmlHttp = new XMLHttpRequest();\n    xmlHttp.timeout = 4000;\n    xmlHttp.onreadystatechange = function () {\n      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)\n        callback(xmlHttp.responseText);\n    };\n    xmlHttp.open(\"GET\", theUrl, true);\n    xmlHttp.send(null);\n  } catch {\n    message(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\nfunction receiveValidation(data) {\n  var validation = JSON.parse(data);\n  if (validation[\"auth\"] == \"success\") {\n    console.log(\"Sucess! Logged in with ip of: \" + validation[\"ip\"]);\n  } else if (validation[\"auth\"] == \"denied\") {\n    confirm(\"You are not allowed to run this Internal Release...\");\n    remote.getCurrentWindow().close();\n  } else {\n    confirm(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\ntry {\n  httpGetAsync(validationServer + \"?version=\" + version, receiveValidation);\n} catch {\n  message(\"Error connecting to Authentication Servers\");\n  remote.getCurrentWindow().close();\n}\n\nruntimeScene.getVariables().get(\"random\").setString(Math.floor(Math.random() * 100));",
+              "inlineCode": "const validationServer = \"http://mc.connorcode.com:8888/login/\";\nconst version =\n  runtimeScene._runtimeGame._variables._variables.items.Version._str;\nconst remote = require(\"electron\").remote;\n\nfunction httpGetAsync(theUrl, callback) {\n  try {\n    var xmlHttp = new XMLHttpRequest();\n    xmlHttp.timeout = 4000;\n    xmlHttp.onreadystatechange = function () {\n      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)\n        callback(xmlHttp.responseText);\n    };\n    xmlHttp.open(\"GET\", theUrl, true);\n    xmlHttp.send(null);\n  } catch {\n    message(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\nfunction receiveValidation(data) {\n  var validation = JSON.parse(data);\n  if (validation[\"auth\"] == \"success\") {\n    console.log(\"Sucess! Logged in with ip of: \" + validation[\"ip\"]);\n    runtimeScene._runtimeGame.getVariables().get(\"isAuth\").setNumber(1);\n  } else if (validation[\"auth\"] == \"denied\") {\n    confirm(\"You are not allowed to run this Internal Release...\");\n    remote.getCurrentWindow().close();\n  } else {\n    confirm(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\ntry {\n  httpGetAsync(validationServer + \"?version=\" + version, receiveValidation);\n} catch {\n  message(\"Error connecting to Authentication Servers\");\n  remote.getCurrentWindow().close();\n}\n\nruntimeScene.getVariables().get(\"random\").setString(Math.floor(Math.random() * 100));",
               "parameterObjects": "",
               "useStrict": true
             }
@@ -2217,7 +2229,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "var debugInfo = \"Debug: {'Scene Name' : '\"+runtimeScene._name.toString()+\"', 'Version' : '\"+runtimeScene._runtimeGame._data.variables[4].value.toString()+\"', 'WinHight' : '\"+runtimeScene._runtimeGame._gameResolutionHeight.toString()+\n\"', 'WinWidth' : '\"+runtimeScene._runtimeGame._gameResolutionWidth.toString()+\"', 'isPaused' : '\"+runtimeScene._runtimeGame._paused.toString()+\n\"', 'Scaleing' : '\"+runtimeScene._runtimeGame._scaleMode.toString()+\"', 'RunTime' : '\"+Math.round(runtimeScene._timeManager.getTimeFromStart()).toString()+\"'}\";\n\nlet date_ob = new Date();\nlet date = (\"0\" + date_ob.getDate()).slice(-2);\nlet month = (\"0\" + (date_ob.getMonth() + 1)).slice(-2);\nlet year = date_ob.getFullYear();\nlet hours = date_ob.getHours();\nlet minutes = date_ob.getMinutes();\nlet seconds = date_ob.getSeconds();\nlet ms = date_ob.getMilliseconds();\n\nruntimeScene.getVariables().get(\"debugInfo\").setString(debugInfo);\nruntimeScene.getVariables().get(\"dateTime\").setString(year + \"-\" + month + \"-\" + date + \"_\" + hours + \"-\" + minutes + \"-\" + seconds + \"-\" + ms);\n",
+          "inlineCode": "var debugInfo = \"Debug: {'Scene Name' : '\"+runtimeScene._name.toString()+\"', 'Version' : '\"+runtimeScene._runtimeGame._data.variables[4].value.toString()+\"', 'WinHight' : '\"+runtimeScene._runtimeGame._gameResolutionHeight.toString()+\n\"', 'WinWidth' : '\"+runtimeScene._runtimeGame._gameResolutionWidth.toString()+\"', 'isPaused' : '\"+runtimeScene._runtimeGame._paused.toString()+\n\"', 'Scaleing' : '\"+runtimeScene._runtimeGame._scaleMode.toString()+\"', 'RunTime' : '\"+Math.round(runtimeScene._timeManager.getTimeFromStart()).toString()+\"'}\";\n\nlet date_ob = new Date();\nlet date = (\"0\" + date_ob.getDate()).slice(-2);\nlet month = (\"0\" + (date_ob.getMonth() + 1)).slice(-2);\nlet year = date_ob.getFullYear();\nlet hours = date_ob.getHours();\nlet minutes = date_ob.getMinutes();\nlet seconds = date_ob.getSeconds();\nlet ms = date_ob.getMilliseconds();\n\nruntimeScene.getVariables().get(\"debugInfo\").setString(debugInfo);\nruntimeScene.getVariables().get(\"dateTime\").setString(year + \"-\" + month + \"-\" + date + \"_\" + hours + \"-\" + minutes + \"-\" + seconds + \"-\" + ms);",
           "parameterObjects": "",
           "useStrict": true
         },
