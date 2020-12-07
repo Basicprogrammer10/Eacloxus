@@ -226,6 +226,15 @@
         "metadata": "",
         "name": "Assets\\Music\\ShutterSound.wav",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/Player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\Player.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
