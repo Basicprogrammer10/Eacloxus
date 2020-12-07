@@ -3760,7 +3760,8 @@
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "//Scene Name | runtimeScene._name\n//Hight      | runtimeScene._runtimeGame._gameResolutionHeight\n//Width      | runtimeScene._runtimeGame._gameResolutionWidth\n//is Paused  | runtimeScene._runtimeGame._paused\n//Scaleing   | runtimeScene._runtimeGame._scaleMode\n//RunTime    | runtimeScene._timeManager.getElapsedTime()\n\nvar debugInfo = \"Debug: {'Scene Name' : '\"+runtimeScene._name.toString()+\"', 'Version' : '\"+runtimeScene._runtimeGame._data.variables[4].value.toString()+\"', 'WinHight' : '\"+runtimeScene._runtimeGame._gameResolutionHeight.toString()+\n\"', 'WinWidth' : '\"+runtimeScene._runtimeGame._gameResolutionWidth.toString()+\"', 'isPaused' : '\"+runtimeScene._runtimeGame._paused.toString()+\n\"', 'Scaleing' : '\"+runtimeScene._runtimeGame._scaleMode.toString()+\"', 'RunTime' : '\"+Math.round(runtimeScene._timeManager.getTimeFromStart()).toString()+\"'}\";\n\nlet date_ob = new Date();\nlet date = (\"0\" + date_ob.getDate()).slice(-2);\nlet month = (\"0\" + (date_ob.getMonth() + 1)).slice(-2);\nlet year = date_ob.getFullYear();\nlet hours = date_ob.getHours();\nlet minutes = date_ob.getMinutes();\nlet seconds = date_ob.getSeconds();\nlet ms = date_ob.getMilliseconds();\n\nruntimeScene.getVariables().get(\"debugInfo\").setString(debugInfo);\nruntimeScene.getVariables().get(\"dateTime\").setString(year + \"-\" + month + \"-\" + date + \"_\" + hours + \"-\" + minutes + \"-\" + seconds + \"-\" + ms);",
           "parameterObjects": "",
-          "useStrict": true
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ],
       "parameters": []

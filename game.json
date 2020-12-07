@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 98,
+    "build": 99,
     "major": 4,
     "minor": 0,
     "revision": 0
@@ -9,17 +9,14 @@
   "properties": {
     "adaptGameResolutionAtRuntime": false,
     "folderProject": true,
-    "linuxExecutableFilename": "",
-    "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.connorcode.eacloxus",
-    "projectFile": "V:\\Documents\\School\\8th\\GameDesign\\Eacloxus\\game.json",
+    "projectUuid": "595e9aee-6fde-4d1e-9d58-149c2f863674",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
+    "useDeprecatedZeroAsDefaultZOrder": true,
     "useExternalSourceFiles": false,
-    "version": "0.0.9",
-    "winExecutableFilename": "",
-    "winExecutableIconFile": "",
+    "version": "0.0.10",
     "name": "Eacloxus",
     "author": "Connor Slade",
     "windowWidth": 1920,
@@ -254,7 +251,7 @@
     },
     {
       "name": "Version",
-      "value": "0.0.9"
+      "value": "0.0.10"
     },
     {
       "name": "showParticles",
@@ -281,6 +278,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/options"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/main"
     }
   ],
   "externalEvents": [],

@@ -3,7 +3,9 @@
   "description": "Originally automatically extracted from events of the project",
   "extensionNamespace": "",
   "fullName": "connorcodeExtra",
+  "iconUrl": "",
   "name": "connorcodeExtra",
+  "previewIconUrl": "",
   "shortDescription": "",
   "tags": "",
   "version": "",
@@ -37,7 +39,8 @@
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": "var settings = {\r\n  \"showFps\": runtimeScene._runtimeGame._variables._variables.items.showFps._value,\r\n  \"playMusic\": runtimeScene._runtimeGame._variables._variables.items.playMusic._value,\r\n  \"playAmbiant\": runtimeScene._runtimeGame._variables._variables.items.playAmbiant._value,\r\n  \"playSFX\": runtimeScene._runtimeGame._variables._variables.items.playSFX._value,\r\n  \"showParticles\": runtimeScene._runtimeGame._variables._variables.items.showParticles._value,\r\n  \"showDebug\": runtimeScene._runtimeGame._variables._variables.items.showDebug._value,\r\n};\r\n\r\nruntimeScene.getVariables().get(\"saveData\").setString(JSON.stringify(settings));",
               "parameterObjects": "",
-              "useStrict": true
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "disabled": false,

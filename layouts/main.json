@@ -1,8 +1,8 @@
 {
   "b": 252,
   "disableInputWhenNotFocused": true,
-  "mangledName": "HomePage",
-  "name": "HomePage",
+  "mangledName": "Main",
+  "name": "Main",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.466
+    "zoomFactor": 0.538
   },
   "objectsGroups": [],
   "variables": [
@@ -63,22 +63,6 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 155,
-      "layer": "",
-      "locked": false,
-      "name": "QuitGame",
-      "persistentUuid": "a29097b5-a86e-4f10-968d-4c87051cc358",
-      "width": 504,
-      "x": 708,
-      "y": 811,
-      "zOrder": 8,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
       "height": 20,
       "layer": "",
       "locked": false,
@@ -88,54 +72,6 @@
       "x": 1920,
       "y": 0,
       "zOrder": 9,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Info",
-      "persistentUuid": "e71015ab-a8e1-4531-9db8-a4a66ae83fc1",
-      "width": 0,
-      "x": 1863,
-      "y": 1023,
-      "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Options",
-      "persistentUuid": "75ae55f6-62ea-438b-96cb-21a96c62dfad",
-      "width": 0,
-      "x": 708,
-      "y": 633,
-      "zOrder": 30,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": -20,
-      "customSize": true,
-      "height": 290,
-      "layer": "",
-      "locked": false,
-      "name": "Version",
-      "persistentUuid": "0e4ef124-baae-4d55-90e2-254ad0600072",
-      "width": 1132,
-      "x": 1185,
-      "y": 276,
-      "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -174,22 +110,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "height": 1080,
-      "layer": "",
-      "locked": false,
-      "name": "TitlePage",
-      "persistentUuid": "28567e4f-bc7d-4865-9a7b-6a461990a382",
-      "width": 1920,
-      "x": 0,
-      "y": 0,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
@@ -200,38 +120,6 @@
       "x": 0,
       "y": 1059,
       "zOrder": 31,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "DebugVersion",
-      "persistentUuid": "9ae8ba13-eef4-4330-91ea-8feb7337b1cc",
-      "width": 0,
-      "x": 854,
-      "y": 339,
-      "zOrder": 32,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 155,
-      "layer": "",
-      "locked": false,
-      "name": "Play",
-      "persistentUuid": "fa9d2615-88f5-449b-a058-b3c4cb433973",
-      "width": 506,
-      "x": 707,
-      "y": 455,
-      "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -315,162 +203,6 @@
       "behaviors": []
     },
     {
-      "name": "TitlePage",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\TitlePage.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Play",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\ButtonHitBox.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Options",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\ButtonHitBox.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "QuitGame",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\ButtonHitBox.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Cursor",
       "tags": "",
       "type": "Sprite",
@@ -510,64 +242,6 @@
       ]
     },
     {
-      "name": "Info",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\BTNInfo.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "bold": true,
-      "italic": false,
-      "name": "Version",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "behaviors": [],
-      "string": " ",
-      "font": "Assets\\Fonts\\Pixeboy.ttf",
-      "characterSize": 50,
-      "color": {
-        "b": 0,
-        "g": 249,
-        "r": 255
-      }
-    },
-    {
       "bold": false,
       "italic": false,
       "name": "DEBUG",
@@ -585,34 +259,6 @@
         "g": 0,
         "r": 0
       }
-    },
-    {
-      "bold": false,
-      "italic": false,
-      "name": "DebugVersion",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "behaviors": [],
-      "string": "ALPHA ?.?.?",
-      "font": "Assets\\Fonts\\Pixeboy.ttf",
-      "characterSize": 50,
-      "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
-      }
-    },
-    {
-      "name": "NewObject",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [],
-      "animations": []
     }
   ],
   "events": [
@@ -1123,53 +769,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "Version",
-                "=",
-                "\"Finally Alpha?\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "PauseTimer"
               },
               "parameters": [
                 "",
                 "\"ExitTimer\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "Play"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "QuitGame"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "Options"
               ],
               "subInstructions": []
             },
@@ -1200,18 +804,6 @@
               },
               "parameters": [
                 "DEBUG"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "DebugVersion",
-                "=",
-                "\"ALPHA \"+GlobalVariableString(Version)"
               ],
               "subInstructions": []
             },
@@ -1445,204 +1037,6 @@
       "creationTime": 0,
       "disabled": false,
       "folded": true,
-      "name": "MOTD",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Size"
-              },
-              "parameters": [
-                "Version",
-                "<",
-                "50"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "TextSize",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Size"
-              },
-              "parameters": [
-                "Version",
-                ">",
-                "65\n\n"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "TextSize",
-                "=",
-                "0\n"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "TextSize",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Size"
-              },
-              "parameters": [
-                "Version",
-                "+",
-                "0.25"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "TextSize",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Size"
-              },
-              "parameters": [
-                "Version",
-                "-",
-                "0.25"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": "var motd = ['[deleted]', '<insert meme here> ', '10 PRINT!', '100 Seasons', '100% lag free', '100% organic', '1000 Miles to go!', '12345 is a bad password!', '144p GAMEPLAY!', '20 GOTO 10!', '2b2t is full', '2b2t is full ya know', '654648316 lines of code!', '90% bug free!', 'A blackhole of destruction!', 'AAAAAAAAAAAAAAAAAAA', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'Accept it.', 'Almoast Thare', 'Also try Minecraft!', 'Are you winning?', 'As seen on TV!', 'Awesome!', 'Bring it on!', \"Chill, it's just a game.\", 'Deja vu!', 'Deja vu!', 'delete this', 'DELETE THIS', 'Do it all, everything!', 'Dodgeball', 'DONE?', 'dont ask questions', 'Dont even start, turn around', 'DuckDuckGo', 'edgy sentence here', 'Every day is the same!', 'Faster Than Light!', 'Finally Alpha', 'Format your hard drive!', 'Gasp!', 'git gud', 'GIT GUD', 'Good luck.', 'Got your nose!', 'Guaranteed!', 'Here we go Noseing Again', 'Holy cow, man!', 'https://connorcode.com', 'I Like Trains.', \"I swear I don't have a life...\", \"It's a game!\", \"It's all connected!\", \"It's downward from here\", \"It's here!\", 'ITS ALL CONNECTED', 'ITS MUFFIN TIME!', 'Keyboard compatible!', 'Larger than Earth!', 'Macroscopic!', 'Milty the Moose', 'More Digital!', 'No Anti-Cheat!', 'NOSE', 'Nose', 'Nose It to the MAX', 'Nose?', 'Nosetastic', 'now with midroll ads!', 'Pixels!', 'Put a Ring on It', 'QUACK', 'Random splash!', 'rm *', 'RRRGGGBBB', 'Schiit Audio', 'Scientific!', 'Shiloh Said so', 'Sigma76 on TOP', 'Simply Nosetastic', 'Singleplayer!', 'Technically good!', \"The bee's knees!\", 'The sum of its parts!', 'This place is scary.', 'Water proof!', 'What is a MOTD?', 'what is real anymore', 'Where am I going?', 'Why dont you Say So?', 'why is avacado so expensive?', 'X 145,200 Y 63 Z -803,450', 'Yaaay!', 'Yeah but who cares...', 'Yeah I have made a mistake', 'YES NO YES NO YES NO YES NO', 'You have nowhere else to go!', 'You will know who I am.', \"You'll miss sanity the most.\", 'youtube.com/watch/dQw4w9WgXcQ', 'Σ76']\nruntimeScene.getVariables().get(\"motd\").setString(motd[Math.floor(Math.random() * 100)]);",
-              "parameterObjects": "DEBUG",
-              "useStrict": true,
-              "eventsSheetExpanded": false
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "Version",
-                    "=",
-                    "VariableString(motd)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "disabled": false,
-      "folded": true,
       "name": "Buttons",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1703,60 +1097,7 @@
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Info",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Options",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "QuitGame",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Play",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ]
+              "subInstructions": []
             },
             {
               "type": {
@@ -1802,19 +1143,6 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "QuitGame",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -1874,19 +1202,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "QuitGame",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Timer"
               },
               "parameters": [
@@ -1919,121 +1234,10 @@
             {
               "type": {
                 "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Mouse",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Play",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Main\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Options",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Info",
-                    "",
-                    "yes",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "QuitGame",
-                    "",
-                    "yes",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Play",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ]
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -2066,19 +1270,6 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Options",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -2123,60 +1314,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "QuitGame",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Info",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Options",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Play",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -2222,7 +1360,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Other",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2354,106 +1492,11 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarGlobal"
-              },
-              "parameters": [
-                "isAuth",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": "const validationServer = \"http://mc.connorcode.com:8888/login/\";\nconst version =\n  runtimeScene._runtimeGame._variables._variables.items.Version._str;\nconst remote = require(\"electron\").remote;\n\nfunction httpGetAsync(theUrl, callback) {\n  try {\n    var xmlHttp = new XMLHttpRequest();\n    xmlHttp.timeout = 4000;\n    xmlHttp.onreadystatechange = function () {\n      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)\n        callback(xmlHttp.responseText);\n    };\n    xmlHttp.open(\"GET\", theUrl, true);\n    xmlHttp.send(null);\n  } catch {\n    message(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\nfunction receiveValidation(data) {\n  var validation = JSON.parse(data);\n  if (validation[\"auth\"] == \"success\") {\n    console.log(\"Sucess! Logged in with ip of: \" + validation[\"ip\"]);\n    runtimeScene._runtimeGame.getVariables().get(\"isAuth\").setNumber(1);\n  } else if (validation[\"auth\"] == \"denied\") {\n    confirm(\"You are not allowed to run this Internal Release...\");\n    remote.getCurrentWindow().close();\n  } else {\n    confirm(\"Error connecting to Authentication Servers\");\n    remote.getCurrentWindow().close();\n  }\n}\n\ntry {\n  httpGetAsync(validationServer + \"?version=\" + version, receiveValidation);\n} catch {\n  message(\"Error connecting to Authentication Servers\");\n  remote.getCurrentWindow().close();\n}\n\nruntimeScene.getVariables().get(\"random\").setString(Math.floor(Math.random() * 100));",
-              "parameterObjects": "",
-              "useStrict": true,
-              "eventsSheetExpanded": false
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "var debugInfo = \"Debug: {'Scene Name' : '\"+runtimeScene._name.toString()+\"', 'Version' : '\"+runtimeScene._runtimeGame._data.variables[4].value.toString()+\"', 'WinHight' : '\"+runtimeScene._runtimeGame._gameResolutionHeight.toString()+\n\"', 'WinWidth' : '\"+runtimeScene._runtimeGame._gameResolutionWidth.toString()+\"', 'isPaused' : '\"+runtimeScene._runtimeGame._paused.toString()+\n\"', 'Scaleing' : '\"+runtimeScene._runtimeGame._scaleMode.toString()+\"', 'RunTime' : '\"+Math.round(runtimeScene._timeManager.getTimeFromStart()).toString()+\"'}\";\n\nlet date_ob = new Date();\nlet date = (\"0\" + date_ob.getDate()).slice(-2);\nlet month = (\"0\" + (date_ob.getMonth() + 1)).slice(-2);\nlet year = date_ob.getFullYear();\nlet hours = date_ob.getHours();\nlet minutes = date_ob.getMinutes();\nlet seconds = date_ob.getSeconds();\nlet ms = date_ob.getMilliseconds();\n\nruntimeScene.getVariables().get(\"debugInfo\").setString(debugInfo);\nruntimeScene.getVariables().get(\"dateTime\").setString(year + \"-\" + month + \"-\" + date + \"_\" + hours + \"-\" + minutes + \"-\" + seconds + \"-\" + ms);",
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": false
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "random",
-                "=",
-                "69"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "EnableLayerEffect"
-              },
-              "parameters": [
-                "",
-                "",
-                "\"GlitchEffect\"",
-                "yes"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "EnableLayerEffect"
-              },
-              "parameters": [
-                "",
-                "",
-                "\"GrainEffect\"",
-                "yes"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         }
       ],
       "parameters": []
