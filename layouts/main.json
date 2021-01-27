@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.538
+    "zoomFactor": 1.642
   },
   "objectsGroups": [],
   "variables": [
@@ -126,16 +126,48 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "height": 640,
+      "customSize": false,
+      "height": 0,
       "layer": "",
       "locked": false,
-      "name": "Player",
-      "persistentUuid": "e8cf1c61-e0dd-4de4-af84-423524dfe718",
-      "width": 640,
-      "x": 489,
-      "y": 253,
+      "name": "Name",
+      "persistentUuid": "31e65417-7e02-495b-b15b-d199cbea12de",
+      "width": 0,
+      "x": 0,
+      "y": 0,
       "zOrder": 32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 31,
+      "layer": "",
+      "locked": false,
+      "name": "NameDisplay",
+      "persistentUuid": "8b9c2b87-f715-48c7-8783-3ad577899ee1",
+      "width": 441,
+      "x": 729,
+      "y": 179,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "character",
+      "persistentUuid": "35c28413-c84f-4799-a792-f934205136ba",
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": 34,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -277,7 +309,33 @@
       }
     },
     {
-      "name": "Player",
+      "name": "Name",
+      "tags": "",
+      "type": "TextEntryObject::TextEntry",
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "NameDisplay",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "CONNOR",
+      "font": "Assets\\Fonts\\Pixeboy.ttf",
+      "characterSize": 45,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "name": "character",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -294,7 +352,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "Assets\\Textures\\Player.png",
+                  "image": "Assets\\Textures\\GameSetup.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1461,6 +1519,18 @@
                 "MouseX()",
                 "=",
                 "MouseY()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "NameDisplay",
+                "=",
+                "Name.String()"
               ],
               "subInstructions": []
             }

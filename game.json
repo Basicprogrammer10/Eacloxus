@@ -235,6 +235,15 @@
         "name": "Assets\\Textures\\Player.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Textures/GameSetup.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Textures\\GameSetup.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
